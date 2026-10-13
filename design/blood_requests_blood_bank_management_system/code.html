@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#7ffc97", "on-secondary-container": "#57657a", "outline-variant": "#e4beb9", "on-primary-fixed": "#410002", "on-surface": "#191c1e", "surface-container-lowest": "#ffffff", "surface": "#f7f9fc", "secondary-fixed-dim": "#b9c7df", "on-tertiary": "#ffffff", "on-error": "#ffffff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#005320", "inverse-surface": "#2d3133", "surface-dim": "#d8dadd", "primary-container": "#b71c1c", "on-primary-fixed-variant": "#93000b", "on-primary-container": "#ffcac4", "background": "#f7f9fc", "inverse-on-surface": "#eff1f4", "outline": "#8f706c", "surface-container-high": "#e6e8eb", "surface-container-low": "#f2f4f7", "tertiary": "#005120", "primary-fixed-dim": "#ffb4ab", "surface-variant": "#e0e3e6", "surface-bright": "#f7f9fc", "surface-container": "#eceef1", "surface-tint": "#b91d1d", "primary-fixed": "#ffdad6", "on-secondary-fixed-variant": "#3a485b", "on-tertiary-container": "#72ef8c", "error-container": "#ffdad6", "on-tertiary-fixed": "#002109", "surface-container-highest": "#e0e3e6", "on-secondary-fixed": "#0d1c2e", "on-primary": "#ffffff", "primary": "#91000a", "tertiary-fixed-dim": "#62df7d", "secondary-container": "#d5e3fc", "inverse-primary": "#ffb4ab", "on-background": "#191c1e", "secondary": "#515f74", "secondary-fixed": "#d5e3fc", "on-error-container": "#93000a", "on-secondary": "#ffffff", "tertiary-container": "#006c2d", "on-surface-variant": "#5b403d" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-xl": "2rem", "space-lg": "1.5rem", "margin": "1rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem" }, "fontFamily": { "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ] }, "fontSize": { "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "30px", "fontWeight": "700" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="HemoLife Blood Bank Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZ96GuLEF-8aNma9VzryUs2etSVDAKZ43Nk5Xb-CfnR2aYiMP5CFNeynLdz9YhE04tOVOkrI847clmNcuiXyaaPyCiunpftWcxAovI-XZ_YxQ_CI-mVaCw-Fi290oexXTgHdzOs0xh7zFI0briM4N56syfTwPvpvAsP51xjHl752JUPuUj6GARZio9PzU3FSjxycDuxwF6DOCPNyNdt5M0prCyYd9ki8gNf6O40LuAaai59dt_KGM7Skk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">HemoLife</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-space-xs">Blood Bank System</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs bg-primary-fixed/30 rounded flex items-center justify-between"><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Active Node</span><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span></div></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="donor-management" href="#"><span class="material-symbols-outlined text-[20px]">person_heart</span><span>Donor Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="patient-management" href="#"><span class="material-symbols-outlined text-[20px]">personal_injury</span><span>Patient Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="hospital-management" href="#"><span class="material-symbols-outlined text-[20px]">local_hospital</span><span>Hospital Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="blood-inventory" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span>Blood Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="blood-donations" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span>Blood Donations</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded transition-colors bg-primary-container text-on-primary font-bold shadow-[0_1px_3px_rgba(15,23,42,0.04)]" data-path="blood-requests" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span>Blood Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>System Settings</span></a></nav></div><div class="p-space-md"><div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Emergency Unit</span><span class="material-symbols-outlined text-[16px] text-primary">emergency</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Blood Emergency Dispatch active on secure terminal 04.</p></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[18px] text-primary">monitor_heart</span><span>Live Terminal</span><span class="text-outline-variant font-body-sm text-body-sm">/</span><span class="text-on-surface font-semibold">Clinical Portal</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant bg-surface-container-low px-space-sm py-space-xs rounded font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>UTC+00:00 Synchronized</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="h-[38px] w-64 lg:w-80 bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-10 pr-space-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-[0_1px_3px_rgba(15,23,42,0.04)] placeholder:text-on-surface-variant/60" placeholder="Search Bag ID, Donor, Group..." type="search"/></div><div class="relative flex items-center"><button aria-label="Notifications" class="relative p-space-sm rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface"></span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-semibold uppercase tracking-wider">Admin</span><div class="relative flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded shadow-[0_1px_2px_rgba(15,23,42,0.02)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fIPeqqLM60jWOBq9o0B6aLfGLqOcvenRlxUqV5QA2Q-bIXIbovD59D1UbpcRJBKtZMAjoS-0sERW1btYbEOLJUpGnxjlpYVmVQcJX-JRBfoC16gdG5wQIHzO1ZjJchJRELgYEpDGzJJ6D4U8T1uSJuKKsWKRR8-g2CKoKyD9fo4OrIkNQ3xGFDrqqQBi5h4lKnfcvds-xnvdyLJa-Kt_LHfJCizGMZZqqinUVw1GGKiRs_izV9_l0A"/><div class="hidden lg:flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface leading-none">Dr. J. Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-space-xs">Chief Pathologist</span></div><a class="ml-space-xs p-1 rounded text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-colors flex items-center" data-path="login" href="#" title="Sign out of system"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></div></header><main class="relative pt-16 flex-1 w-full bg-surface px-margin-desktop"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Triage & Dispatch Alert Header -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md py-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold tracking-wider uppercase">Emergency Protocol Level 2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span> System Sync: Just Now
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Blood Requests Dispatch &amp; Cross-Match Matrix</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Clinical triage terminal for inpatient transfers, trauma requisition orders, and inventory allocation verification.</p>
+</div>
+<!-- Quick Action Tray -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs" onclick="openFulfillModal('REQ-2024-0891', 'Elena Rostova (34/F)', 'O-', 3, 'Metro Trauma Center', 'EMERGENCY', 4)" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">biotech</span>
+<span>Cross-Match Registry</span>
+</button>
+<button class="px-space-md py-2 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs" onclick="openRequisitionModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Create Blood Request</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric Counters Bento -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-md mb-space-lg">
+<!-- Metric 1: Total Requests -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Total Requisitions</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">ballot</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">64</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">batches / 24h</span>
+</div>
+<div class="mt-space-xs w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Capacity: Normal</span>
+<span class="text-tertiary font-semibold">+12% vs ystd</span>
+</div>
+</div>
+<!-- Metric 2: Pending Review -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Pending Review</span>
+<span class="material-symbols-outlined text-[20px] text-on-secondary-container">pending_actions</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight text-on-secondary-container">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">needs triage</span>
+</div>
+<div class="mt-space-xs w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 28%;"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Avg Wait: 14m</span>
+<span class="text-secondary font-semibold">Triage Stage 1</span>
+</div>
+</div>
+<!-- Metric 3: Approved -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Approved Ready</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">verified</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">28</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">verified units</span>
+</div>
+<div class="mt-space-xs w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 44%;"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Cold Chain Locked</span>
+<span class="text-tertiary font-semibold">Ready to Pack</span>
+</div>
+</div>
+<!-- Metric 4: Emergency Queue -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-error">Emergency Queue</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-error">emergency</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-headline-xl text-headline-xl font-bold tracking-tight text-error">05</span>
+<span class="font-label-sm text-label-sm text-error/80 font-semibold">CRITICAL</span>
+</div>
+<div class="mt-space-xs w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full animate-pulse" style="width: 80%;"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs font-label-sm text-label-sm">
+<span class="text-error font-medium">TAT Limit &lt; 20m</span>
+<span class="px-1.5 py-0.2 rounded bg-error/10 text-error font-bold font-label-sm">Priority 1</span>
+</div>
+</div>
+<!-- Metric 5: Fulfilled Today -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between col-span-2 md:col-span-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Fulfilled Today</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary-container">task_alt</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">13</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">dispatched</span>
+</div>
+<div class="mt-space-xs w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 65%;"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Cold Boxes Issued</span>
+<span class="text-on-surface font-semibold">41 Total Pints</span>
+</div>
+</div>
+</div>
+<!-- Operational Filter & Search Console -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-md flex flex-col gap-space-md">
+<!-- Top Row: Search & Selectors -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-sm items-center">
+<!-- Search -->
+<div class="lg:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+<input class="h-[38px] w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md rounded focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/60" id="tableSearch" onkeyup="filterTableRows()" placeholder="Search Requisition ID, Patient name, Hospital, or Attending..." type="search"/>
+</div>
+<!-- Blood Group Multi Filter Pills -->
+<div class="lg:col-span-4 flex items-center gap-1.5 overflow-x-auto py-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold mr-1 shrink-0">Group:</span>
+<button class="group-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-bold shadow-sm" onclick="setGroupFilter('ALL', this)" type="button">ALL</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('O-', this)" type="button">O-</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('O+', this)" type="button">O+</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('A+', this)" type="button">A+</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('B+', this)" type="button">B+</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('B-', this)" type="button">B-</button>
+<button class="group-btn px-2 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold" onclick="setGroupFilter('AB-', this)" type="button">AB-</button>
+</div>
+<!-- Priority Filter Dropdown -->
+<div class="lg:col-span-3 flex items-center gap-space-sm justify-end">
+<div class="relative w-full">
+<select class="h-[38px] w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3 rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm appearance-none cursor-pointer" id="priorityFilterSelect" onchange="filterTableRows()">
+<option value="ALL">All Priority Queues</option>
+<option value="EMERGENCY">Emergency (Stat Dispatch)</option>
+<option value="URGENT">Urgent (Within 4 hrs)</option>
+<option value="NORMAL">Normal Elective</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Status Tabs -->
+<div class="flex items-center justify-between pt-space-xs overflow-x-auto">
+<div class="flex items-center gap-2">
+<button class="status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm" onclick="setStatusTab('ALL', this)" type="button">
+<span>All Requisitions</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary text-[10px]">64</span>
+</button>
+<button class="status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold" onclick="setStatusTab('PENDING', this)" type="button">
+<span>Pending Review</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[10px]">18</span>
+</button>
+<button class="status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold" onclick="setStatusTab('APPROVED', this)" type="button">
+<span>Approved</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[10px]">28</span>
+</button>
+<button class="status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold" onclick="setStatusTab('FULFILLED', this)" type="button">
+<span>Fulfilled</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[10px]">13</span>
+</button>
+<button class="status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold" onclick="setStatusTab('REJECTED', this)" type="button">
+<span>Rejected / Void</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[10px]">5</span>
+</button>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Inventory Matrix Pre-Verified against Cold Bank #03</span>
+</div>
+</div>
+</div>
+<!-- Requisitions Data Table View -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Requisition ID</th>
+<th class="py-3 px-4 font-semibold">Patient Profile</th>
+<th class="py-3 px-4 font-semibold">Requesting Facility</th>
+<th class="py-3 px-4 font-semibold">Blood Group</th>
+<th class="py-3 px-4 font-semibold">Requirement</th>
+<th class="py-3 px-4 font-semibold">Logged Timestamp</th>
+<th class="py-3 px-4 font-semibold">Priority</th>
+<th class="py-3 px-4 font-semibold">Status</th>
+<th class="py-3 px-4 font-semibold text-right">Clinical Action</th>
+</tr>
+</thead>
+<tbody class="text-on-surface" id="requisitionsTableBody">
+<!-- Row 1: Emergency & Low Stock Conflict Example -->
+<tr class="hover:bg-surface-container-low transition-colors" data-group="O-" data-hospital="Metro Trauma Center" data-id="REQ-2024-0891" data-patient="Elena Rostova" data-priority="EMERGENCY" data-status="PENDING">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+<span>REQ-2024-0891</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">34 yrs • Female • Bed TR-02</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Metro Trauma Center</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Trauma Surgery Unit 4</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-error-container text-on-error-container">
+                O-NEG
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span class="text-primary font-bold">3 Units</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Packed Red Cells</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Today, 10:42 AM</div>
+<div class="text-[11px] text-error font-semibold">18 min elapsed</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Emergency
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                Pending Review
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center" onclick="openFulfillModal('REQ-2024-0891', 'Elena Rostova (34/F)', 'O-', 3, 'Metro Trauma Center', 'EMERGENCY', 2)" title="Verify &amp; Fulfill" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center" onclick="viewRequisitionSlip('REQ-2024-0891', 'Elena Rostova', 'Metro Trauma Center', 'O-', 3, 'EMERGENCY')" title="Requisition Slip" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-error hover:bg-error-container/30 transition-colors flex items-center" onclick="triggerRejectPrompt('REQ-2024-0891')" title="Reject Requisition" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Approved, ready for dispatch -->
+<tr class="hover:bg-surface-container-low transition-colors" data-group="A+" data-hospital="St. Jude General Hospital" data-id="REQ-2024-0890" data-patient="Marcus Sterling" data-priority="URGENT" data-status="APPROVED">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-on-surface">
+<span>REQ-2024-0890</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Marcus Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">58 yrs • Male • Ward 4B</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">St. Jude General Hospital</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cardiothoracic OT</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-surface-container-high text-on-surface">
+                A-POS
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span>2 Units</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Whole Blood</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Today, 09:15 AM</div>
+<div class="text-[11px] text-on-surface-variant font-medium">1h 45m elapsed</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-amber-100 text-amber-800">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Urgent
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                Approved
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold hover:bg-tertiary transition-colors flex items-center gap-1" onclick="openFulfillModal('REQ-2024-0890', 'Marcus Sterling (58/M)', 'A+', 2, 'St. Jude General Hospital', 'URGENT', 14)" type="button">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>Fulfill</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center" onclick="viewRequisitionSlip('REQ-2024-0890', 'Marcus Sterling', 'St. Jude General Hospital', 'A+', 2, 'URGENT')" title="Requisition Slip" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Fulfilled Batch -->
+<tr class="hover:bg-surface-container-low transition-colors" data-group="B+" data-hospital="Mercy Children's Clinic" data-id="REQ-2024-0888" data-patient="Kavita Naidu" data-priority="NORMAL" data-status="FULFILLED">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-on-surface">
+<span>REQ-2024-0888</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Kavita Naidu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">11 yrs • Female • Hematology 1</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Mercy Children's Clinic</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pediatric Oncology</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-surface-container-high text-on-surface">
+                B-POS
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span>1 Unit</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Platelet Concentrate</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Today, 08:30 AM</div>
+<div class="text-[11px] text-tertiary font-medium">Dispatched 09:10 AM</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container-highest text-secondary">
+                Normal
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Fulfilled
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1 ml-auto" onclick="viewRequisitionSlip('REQ-2024-0888', 'Kavita Naidu', 'Mercy Children Clinic', 'B+', 1, 'NORMAL')" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Slip</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Pending Urgent with Sufficient Stock -->
+<tr class="hover:bg-surface-container-low transition-colors" data-group="O+" data-hospital="Memorial Surgical Wing" data-id="REQ-2024-0887" data-patient="Arthur Davies" data-priority="URGENT" data-status="PENDING">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-on-surface">
+<span>REQ-2024-0887</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Arthur Davies</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">69 yrs • Male • Orthopedic 2</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Memorial Surgical Wing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Post-Op Recovery Room</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-surface-container-high text-on-surface">
+                O-POS
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span>4 Units</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Packed Red Cells</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Today, 08:05 AM</div>
+<div class="text-[11px] text-on-surface-variant font-medium">3h elapsed</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-amber-100 text-amber-800">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Urgent
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                Pending Review
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant hover:bg-tertiary-fixed-dim font-label-sm text-label-sm font-bold transition-colors" onclick="approveDirectly('REQ-2024-0887')" type="button">
+                  Approve
+                </button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center" onclick="openFulfillModal('REQ-2024-0887', 'Arthur Davies (69/M)', 'O+', 4, 'Memorial Surgical Wing', 'URGENT', 22)" title="Verify &amp; Issue" type="button">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-error hover:bg-error-container/30 transition-colors flex items-center" onclick="triggerRejectPrompt('REQ-2024-0887')" title="Reject" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Emergency Pending High Criticality -->
+<tr class="hover:bg-surface-container-low transition-colors" data-group="AB-" data-hospital="North City Emergency Care" data-id="REQ-2024-0885" data-patient="Zoya Petrov" data-priority="EMERGENCY" data-status="PENDING">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+<span>REQ-2024-0885</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Zoya Petrov</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">27 yrs • Female • ICU-07</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">North City Emergency Care</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resuscitation Bay</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-error-container text-on-error-container">
+                AB-NEG
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span class="text-primary font-bold">2 Units</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Fresh Frozen Plasma</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Today, 07:44 AM</div>
+<div class="text-[11px] text-error font-semibold">Stat Dispatch Triggered</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Emergency
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                Pending Review
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm font-bold transition-colors flex items-center gap-1" onclick="openFulfillModal('REQ-2024-0885', 'Zoya Petrov (27/F)', 'AB-', 2, 'North City Emergency Care', 'EMERGENCY', 1)" type="button">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+<span>Triage</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center" onclick="viewRequisitionSlip('REQ-2024-0885', 'Zoya Petrov', 'North City Emergency Care', 'AB-', 2, 'EMERGENCY')" title="Requisition Slip" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Rejected Requisition Example -->
+<tr class="hover:bg-surface-container-low transition-colors opacity-75" data-group="B-" data-hospital="Highland General" data-id="REQ-2024-0882" data-patient="David Chen" data-priority="NORMAL" data-status="REJECTED">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-on-surface">
+<span class="line-through text-on-surface-variant">REQ-2024-0882</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">David Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45 yrs • Male • Outpatient Amb</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Highland General</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Elective Knee Surgery</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-surface-container text-on-surface-variant">
+                B-NEG
+              </span>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+<span>2 Units</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Packed Red Cells</span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+<div>Yesterday, 04:20 PM</div>
+<div class="text-[11px] text-error font-medium">Antibody Screen Incompatible</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container-highest text-secondary">
+                Normal
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container text-on-error-container">
+                Rejected
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1 ml-auto" onclick="viewRequisitionSlip('REQ-2024-0882', 'David Chen', 'Highland General', 'B-', 2, 'REJECTED')" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Audit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Meta & Pagination Controls -->
+<div class="px-space-md py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>Displaying <strong class="text-on-surface font-semibold">1-6</strong> of <strong class="text-on-surface font-semibold">64</strong> Active Clinical Orders</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span> Real-time Channel Open
+        </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-semibold disabled:opacity-40" disabled="" type="button">Previous</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-bold" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-semibold" type="button">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-semibold" type="button">3</button>
+<span class="px-1 text-on-surface-variant">…</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-semibold" type="button">11</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-semibold" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Clinical Verification Infographic Drawer / Banner -->
+<div class="mt-space-lg grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Cold Storage Availability Monitor -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">ac_unit</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Vault Stock Viability</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">2.4°C Temp Lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant my-space-xs">Current live inventory counts across core ABO and Rh groups ready for instant digital allocation.</p>
+<!-- Visual Stock Level Bars -->
+<div class="space-y-2 mt-1">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-mono font-bold text-on-surface">O-Negative (Critical Universal)</span>
+<span class="text-error font-bold">4 Units (Threshold 10)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-mono font-bold text-on-surface">O-Positive</span>
+<span class="text-tertiary font-bold">28 Units (Stable)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-mono font-bold text-on-surface">AB-Negative</span>
+<span class="text-amber-700 font-bold">2 Units (Low Alert)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 15%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Laboratory Dispatch Feed -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">science</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Cross-Match Serology Log</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">L-3 Automated</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-start gap-space-xs p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">verified</span>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Bag #BL-9924-A compatible with REQ-0890</p>
+<p class="text-on-surface-variant text-[11px]">Agglutination negative. Indirect Antiglobulin Test (IAT) Cleared.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">error</span>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Bag #BL-4412-B Flagged Quarantine</p>
+<p class="text-on-surface-variant text-[11px]">Minor irregular Kell antibody conflict detected. Discard initiated.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 text-right">
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">View Complete Serology Workstation →</a>
+</div>
+</div>
+<!-- Chain of Custody Protocol Notice -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Dual Verification Mandate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Life-Critical Requisition Check</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          In compliance with National Blood Transfusion Standards, units released under Emergency or Stat triage bypass antibody screening only with explicit Pathologist override and biometric authorization.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/50 flex items-center justify-center text-primary font-bold font-label-sm">
+          !
+        </div>
+<div class="text-[11px] font-body-sm text-on-surface-variant leading-tight">
+          Audit trails are digitally immutably locked under ISO-15189 protocol.
+        </div>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- MODAL 1: CREATE BLOOD REQUEST MODAL (Hidden by default)       -->
+<!-- ============================================================== -->
+<div class="fixed inset-0 z-50 hidden bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="createRequestModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-2xl w-full max-h-[921px] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">note_add</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Initiate Blood Requisition</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="closeRequisitionModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<form class="p-space-lg overflow-y-auto space-y-space-md" id="newRequestForm" onsubmit="submitNewRequest(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Patient Name -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Patient Full Name *</label>
+<input class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="newReqPatient" placeholder="e.g. Jonathan R. Walker" required="" type="text"/>
+</div>
+<!-- Age & Gender -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Age *</label>
+<input class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="newReqAge" max="120" min="0" placeholder="42" required="" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Gender *</label>
+<select class="h-[38px] w-full px-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="newReqGender" required="">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+<!-- Requesting Facility / Hospital -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Receiving Facility / Hospital *</label>
+<select class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="newReqHospital" required="">
+<option value="Metro Trauma Center">Metro Trauma Center</option>
+<option value="St. Jude General Hospital">St. Jude General Hospital</option>
+<option value="Mercy Children's Clinic">Mercy Children's Clinic</option>
+<option value="North City Emergency Care">North City Emergency Care</option>
+<option value="Memorial Surgical Wing">Memorial Surgical Wing</option>
+</select>
+</div>
+<!-- Attending Physician & License -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Attending Surgeon / M.D. *</label>
+<input class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="newReqDoctor" placeholder="Dr. S. Moreau, MD" required="" type="text"/>
+</div>
+<!-- Required Blood Group -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Blood Group Required *</label>
+<select class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm font-mono font-bold" id="newReqBloodGroup" onchange="updateModalStockEstimate()" required="">
+<option value="O-">O Negative (Universal RBC)</option>
+<option value="O+">O Positive</option>
+<option value="A+">A Positive</option>
+<option value="A-">A Negative</option>
+<option value="B+">B Positive</option>
+<option value="B-">B Negative</option>
+<option value="AB+">AB Positive (Universal FFP)</option>
+<option value="AB-">AB Negative</option>
+</select>
+</div>
+<!-- Units Count & Component Type -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Units (Bags) *</label>
+<input class="h-[38px] w-full px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm font-bold" id="newReqUnits" max="10" min="1" oninput="updateModalStockEstimate()" required="" type="number" value="2"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Product Type *</label>
+<select class="h-[38px] w-full px-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm text-xs" id="newReqProduct">
+<option value="PRBC">Packed RBCs</option>
+<option value="WB">Whole Blood</option>
+<option value="FFP">Fresh Frozen Plasma</option>
+<option value="PLT">Platelets</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Priority Select Radios -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-2">Clinical Urgency Classification *</label>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="cursor-pointer flex flex-col p-2.5 rounded bg-surface-container-low hover:bg-surface-container has-[:checked]:bg-primary-fixed/40 transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-error">Emergency (Stat)</span>
+<input class="accent-primary" name="reqPriority" type="radio" value="EMERGENCY"/>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm leading-tight">&lt; 30 min trauma response</span>
+</label>
+<label class="cursor-pointer flex flex-col p-2.5 rounded bg-surface-container-low hover:bg-surface-container has-[:checked]:bg-amber-100 transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-amber-800">Urgent</span>
+<input checked="" class="accent-primary" name="reqPriority" type="radio" value="URGENT"/>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm leading-tight">Within 4 hours timeline</span>
+</label>
+<label class="cursor-pointer flex flex-col p-2.5 rounded bg-surface-container-low hover:bg-surface-container has-[:checked]:bg-secondary-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary">Normal</span>
+<input class="accent-primary" name="reqPriority" type="radio" value="NORMAL"/>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm leading-tight">Scheduled elective surgery</span>
+</label>
+</div>
+</div>
+<!-- Dynamic Stock Estimation Warning Container -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between font-label-sm text-label-sm" id="newReqStockAlert">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="text-on-surface" id="newReqStockAlertText">Available stock in Vault: <strong>4 Units</strong> of O-</span>
+</div>
+<span class="font-mono text-tertiary font-bold">SUFFICIENT</span>
+</div>
+<!-- Clinical Indication / Notes -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Clinical Indication &amp; Transfusion History</label>
+<textarea class="w-full p-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50" placeholder="e.g. Blunt abdominal trauma, massive transfusion protocol requested..." rows="2"></textarea>
+</div>
+<!-- Modal Footer Actions -->
+<div class="pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors" onclick="closeRequisitionModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-lg py-2 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-bold shadow-sm transition-colors flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Requisition to Dispatch</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- MODAL 2: FULFILL / INVENTORY VERIFICATION MODAL                -->
+<!-- ============================================================== -->
+<div class="fixed inset-0 z-50 hidden bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="fulfillModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">inventory_2</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">Fulfill Blood Request Order</h3>
+<span class="font-label-sm text-label-sm font-mono text-primary font-bold" id="fulfillModalReqId">REQ-XXXX</span>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" onclick="closeFulfillModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Content -->
+<div class="p-space-lg space-y-space-md">
+<!-- Patient Details Summary -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Patient &amp; Facility</span>
+<div class="font-label-md text-label-md font-bold text-on-surface mt-0.5" id="fulfillPatientInfo">Patient Name</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant" id="fulfillHospitalInfo">Hospital Facility</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Group Required</span>
+<div class="mt-1 inline-flex items-center px-3 py-1 rounded font-mono font-bold text-sm bg-surface-container-highest text-on-surface" id="fulfillGroupBadge">
+              O-NEG
+            </div>
+</div>
+</div>
+<!-- Inventory Cross Check Visual Component -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Inventory Match &amp; Allocation Check</span>
+<span class="font-mono font-bold text-primary" id="fulfillStockRatio">Req: 3 | Avail: 4</span>
+</div>
+<!-- Availability Comparison Box -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-2" id="stockComparisonCard">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Units Requested:</span>
+<span class="font-bold text-on-surface" id="fulfillUnitsReqText">3 Units (Packed RBC)</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Units in Active Cold Vault #03:</span>
+<span class="font-bold text-on-surface" id="fulfillUnitsAvailText">4 Verified Units</span>
+</div>
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary h-full rounded-full" id="fulfillStockProgressBar" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<!-- Insufficient Warning (Dynamic display) -->
+<div class="hidden p-3 rounded-lg bg-error-container text-on-error-container flex items-start gap-2" id="fulfillInsufficientWarning">
+<span class="material-symbols-outlined text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="text-xs leading-relaxed">
+<strong>CRITICAL STOCK DEFICIT:</strong> Requested volume exceeds immediately verified compatible units. Partial release or Emergency Protocol override required by Chief Pathologist.
+          </div>
+</div>
+<!-- Selected Bag Batch Barcodes -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1.5">Assigned Cold Bank Barcodes (Auto-Reserved)</label>
+<div class="grid grid-cols-2 gap-2 text-xs font-mono">
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<span class="text-on-surface">BAG-8829-01</span>
+<span class="text-tertiary font-bold">MATCH</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<span class="text-on-surface">BAG-8829-02</span>
+<span class="text-tertiary font-bold">MATCH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<button class="px-4 py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors" onclick="closeFulfillModal()" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-bold shadow-sm transition-colors flex items-center gap-1.5" id="confirmFulfillBtn" onclick="openConfirmationModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Proceed to Inventory Release</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- MODAL 3: SAFETY CHECK & STOCK DEDUCTION CONFIRMATION           -->
+<!-- ============================================================== -->
+<div class="fixed inset-0 z-50 hidden bg-on-surface/60 backdrop-blur-sm flex items-center justify-center p-4" id="safetyConfirmModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full shadow-2xl overflow-hidden p-space-lg animate-in fade-in zoom-in-95 duration-150">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">lock_clock</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Confirm Cold Stock Release</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+        Stock will be <strong class="text-on-surface font-semibold">permanently deducted</strong> from active blood bank inventory. Confirm release and dispatch of units to cold transport chain?
+      </p>
+<div class="my-space-md p-space-sm bg-surface-container-low rounded-lg text-xs font-mono space-y-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Requisition:</span>
+<span class="font-bold text-on-surface" id="confirmModalReqId">REQ-2024-0891</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Deduction Volume:</span>
+<span class="font-bold text-error" id="confirmModalDeduct">3 Units (O-NEG)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Dispatch Protocol:</span>
+<span class="text-tertiary font-bold">Standard 4°C Cooler Box</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors" onclick="closeConfirmationModal()" type="button">
+          Abort
+        </button>
+<button class="px-space-lg py-2 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-bold shadow-md transition-colors flex items-center gap-1.5" onclick="executeFinalDeduction()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Confirm Release</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- MODAL 4: CLINICAL REQUISITION SLIP PREVIEW                     -->
+<!-- ============================================================== -->
+<div class="fixed inset-0 z-50 hidden bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="requisitionSlipModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_hospital</span>
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider">Clinical Requisition Form</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" onclick="closeSlipModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="border-b pb-space-sm border-surface-container flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">HemoLife Central Blood Bank</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Official Clinical Requisition Slip</span>
+</div>
+<span class="font-mono font-bold text-primary text-sm" id="slipReqId">REQ-2024-0891</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-xs">
+<div>
+<span class="text-on-surface-variant uppercase font-semibold">Patient Name</span>
+<div class="font-bold text-sm text-on-surface mt-0.5" id="slipPatient">Elena Rostova</div>
+</div>
+<div>
+<span class="text-on-surface-variant uppercase font-semibold">Receiving Center</span>
+<div class="font-bold text-sm text-on-surface mt-0.5" id="slipHospital">Metro Trauma Center</div>
+</div>
+<div>
+<span class="text-on-surface-variant uppercase font-semibold">Blood Group &amp; Rh</span>
+<div class="font-bold text-sm text-primary font-mono mt-0.5" id="slipGroup">O-NEG</div>
+</div>
+<div>
+<span class="text-on-surface-variant uppercase font-semibold">Allocated Units</span>
+<div class="font-bold text-sm text-on-surface mt-0.5" id="slipUnits">3 Units (PRBC)</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low font-mono text-[11px] text-on-surface-variant space-y-1">
+<div>Serology Barcode: 7729-XC-89100-MED</div>
+<div>Transfusion License Verification: VALIDATED</div>
+<div>Authorized Lab Pathologist: Dr. J. Vance, MD</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex justify-end gap-2">
+<button class="px-4 py-1.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold" onclick="closeSlipModal()" type="button">Close</button>
+<button class="px-4 py-1.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Requisition Slip</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Template -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md font-semibold" id="toastMessage">Requisition updated successfully.</span>
+</div>
+</div>
+<script>
+  let activeFilterGroup = 'ALL';
+  let activeStatusTab = 'ALL';
+  let currentTargetReq = {};
+
+  // Group Multi-Filter
+  function setGroupFilter(group, btnEl) {
+    activeFilterGroup = group;
+    document.querySelectorAll('.group-btn').forEach(btn => {
+      btn.className = 'group-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface hover:bg-surface-container font-semibold';
+    });
+    btnEl.className = 'group-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-bold shadow-sm';
+    filterTableRows();
+  }
+
+  // Status Tab Switch
+  function setStatusTab(status, tabEl) {
+    activeStatusTab = status;
+    document.querySelectorAll('.status-tab').forEach(tab => {
+      tab.className = 'status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold';
+    });
+    tabEl.className = 'status-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm';
+    filterTableRows();
+  }
+
+  // Table Master Filter
+  function filterTableRows() {
+    const searchVal = document.getElementById('tableSearch').value.toLowerCase();
+    const priorityVal = document.getElementById('priorityFilterSelect').value;
+    const rows = document.querySelectorAll('#requisitionsTableBody tr');
+
+    rows.forEach(row => {
+      const rowId = (row.getAttribute('data-id') || '').toLowerCase();
+      const patient = (row.getAttribute('data-patient') || '').toLowerCase();
+      const hospital = (row.getAttribute('data-hospital') || '').toLowerCase();
+      const group = row.getAttribute('data-group') || '';
+      const priority = row.getAttribute('data-priority') || '';
+      const status = row.getAttribute('data-status') || '';
+
+      const matchSearch = rowId.includes(searchVal) || patient.includes(searchVal) || hospital.includes(searchVal);
+      const matchGroup = (activeFilterGroup === 'ALL') || (group === activeFilterGroup);
+      const matchPriority = (priorityVal === 'ALL') || (priority === priorityVal);
+      const matchStatus = (activeStatusTab === 'ALL') || (status === activeStatusTab);
+
+      if (matchSearch && matchGroup && matchPriority && matchStatus) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Toast Functionality
+  function showToast(message, isError = false) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+
+    toastMsg.innerText = message;
+    toastIcon.innerText = isError ? 'error' : 'check_circle';
+    toastIcon.className = isError ? 'material-symbols-outlined text-[20px] text-error' : 'material-symbols-outlined text-[20px] text-tertiary-fixed';
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 3800);
+  }
+
+  // Modal 1: Create Request
+  function openRequisitionModal() {
+    document.getElementById('createRequestModal').classList.remove('hidden');
+    updateModalStockEstimate();
+  }
+
+  function closeRequisitionModal() {
+    document.getElementById('createRequestModal').classList.add('hidden');
+  }
+
+  function updateModalStockEstimate() {
+    const group = document.getElementById('newReqBloodGroup').value;
+    const units = parseInt(document.getElementById('newReqUnits').value) || 1;
+    const alertBox = document.getElementById('newReqStockAlert');
+    const alertText = document.getElementById('newReqStockAlertText');
+
+    let available = 4;
+    if (group === 'O+') available = 28;
+    if (group === 'A+') available = 14;
+    if (group === 'AB-') available = 2;
+    if (group === 'B-') available = 1;
+
+    if (units > available) {
+      alertBox.className = 'p-3 rounded-lg bg-error-container text-on-error-container flex items-center justify-between font-label-sm text-label-sm';
+      alertText.innerHTML = `Attention: Only <strong>${available} Units</strong> available in Vault for ${group}.`;
+      alertBox.lastElementChild.className = 'font-mono text-error font-bold';
+      alertBox.lastElementChild.innerText = 'DEFICIT';
+    } else {
+      alertBox.className = 'p-3 rounded-lg bg-surface-container flex items-center justify-between font-label-sm text-label-sm';
+      alertText.innerHTML = `Available stock in Vault: <strong>${available} Units</strong> of ${group}`;
+      alertBox.lastElementChild.className = 'font-mono text-tertiary font-bold';
+      alertBox.lastElementChild.innerText = 'SUFFICIENT';
+    }
+  }
+
+  function submitNewRequest(e) {
+    e.preventDefault();
+    const patient = document.getElementById('newReqPatient').value;
+    const hospital = document.getElementById('newReqHospital').value;
+    const group = document.getElementById('newReqBloodGroup').value;
+    const units = document.getElementById('newReqUnits').value;
+    const priority = document.querySelector('input[name="reqPriority"]:checked').value;
+
+    const newId = 'REQ-2024-' + Math.floor(1000 + Math.random() * 9000);
+
+    const tbody = document.getElementById('requisitionsTableBody');
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-id', newId);
+    tr.setAttribute('data-patient', patient);
+    tr.setAttribute('data-hospital', hospital);
+    tr.setAttribute('data-group', group);
+    tr.setAttribute('data-priority', priority);
+    tr.setAttribute('data-status', 'PENDING');
+    tr.className = 'hover:bg-surface-container-low transition-colors animate-in fade-in duration-300';
+
+    const priorityBadge = priority === 'EMERGENCY' 
+      ? '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-error-container text-on-error-container"><span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>Emergency</span>'
+      : (priority === 'URGENT' ? '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-amber-100 text-amber-800"><span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>Urgent</span>'
+      : '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container-highest text-secondary">Normal</span>');
+
+    tr.innerHTML = `
+      <td class="py-3.5 px-4 font-label-md text-label-md font-bold text-on-surface">${newId}</td>
+      <td class="py-3.5 px-4">
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-bold text-on-surface">${patient}</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Adult &bull; Inpatient</span>
+        </div>
+      </td>
+      <td class="py-3.5 px-4">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-label-sm font-semibold text-on-surface">${hospital}</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">General Ward</span>
+        </div>
+      </td>
+      <td class="py-3.5 px-4">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-mono font-bold bg-surface-container-high text-on-surface">${group}</span>
+      </td>
+      <td class="py-3.5 px-4 font-label-md text-label-md font-semibold text-on-surface">
+        <span>${units} Units</span>
+        <span class="block font-body-sm text-body-sm text-on-surface-variant">Clinical Stock</span>
+      </td>
+      <td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant">
+        <div>Just now</div>
+        <div class="text-[11px] text-tertiary font-semibold">Triage Queued</div>
+      </td>
+      <td class="py-3.5 px-4">${priorityBadge}</td>
+      <td class="py-3.5 px-4">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">Pending Review</span>
+      </td>
+      <td class="py-3.5 px-4 text-right">
+        <div class="flex items-center justify-end gap-1.5">
+          <button type="button" onclick="openFulfillModal('${newId}', '${patient}', '${group}', ${units}, '${hospital}', '${priority}', 10)" class="p-1.5 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center">
+            <span class="material-symbols-outlined text-[18px]">verified_user</span>
+          </button>
+          <button type="button" onclick="viewRequisitionSlip('${newId}', '${patient}', '${hospital}', '${group}', ${units}, '${priority}')" class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center">
+            <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          </button>
+        </div>
+      </td>
+    `;
+
+    tbody.insertBefore(tr, tbody.firstChild);
+    closeRequisitionModal();
+    showToast(`Requisition ${newId} queued successfully for ${patient}.`);
+  }
+
+  // Modal 2: Fulfill Modal
+  function openFulfillModal(reqId, patient, group, unitsReq, hospital, priority, availableStock) {
+    currentTargetReq = { reqId, patient, group, unitsReq, hospital, priority, availableStock };
+
+    document.getElementById('fulfillModalReqId').innerText = reqId;
+    document.getElementById('fulfillPatientInfo').innerText = patient;
+    document.getElementById('fulfillHospitalInfo').innerText = hospital;
+    document.getElementById('fulfillGroupBadge').innerText = group;
+    document.getElementById('fulfillUnitsReqText').innerText = `${unitsReq} Units`;
+    document.getElementById('fulfillUnitsAvailText').innerText = `${availableStock} Units Available`;
+    document.getElementById('fulfillStockRatio').innerText = `Req: ${unitsReq} | Avail: ${availableStock}`;
+
+    const warningBox = document.getElementById('insufficientWarning');
+    const warning = document.getElementById('fulfillInsufficientWarning');
+    const confirmBtn = document.getElementById('confirmFulfillBtn');
+    const bar = document.getElementById('fulfillStockProgressBar');
+
+    const pct = Math.min(100, Math.round((unitsReq / (availableStock || 1)) * 100));
+    bar.style.width = `${pct}%`;
+
+    if (unitsReq > availableStock) {
+      warning.classList.remove('hidden');
+      bar.className = 'bg-error h-full rounded-full';
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">emergency</span><span>Override &amp; Release Partial</span>';
+    } else {
+      warning.classList.add('hidden');
+      bar.className = 'bg-tertiary h-full rounded-full';
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">output</span><span>Proceed to Inventory Release</span>';
+    }
+
+    document.getElementById('fulfillModal').classList.remove('hidden');
+  }
+
+  function closeFulfillModal() {
+    document.getElementById('fulfillModal').classList.add('hidden');
+  }
+
+  // Modal 3: Confirmation Dialog
+  function openConfirmationModal() {
+    closeFulfillModal();
+    document.getElementById('confirmModalReqId').innerText = currentTargetReq.reqId || 'REQ-ACTIVE';
+    document.getElementById('confirmModalDeduct').innerText = `${currentTargetReq.unitsReq || 2} Units (${currentTargetReq.group || 'O-'})`;
+    document.getElementById('safetyConfirmModal').classList.remove('hidden');
+  }
+
+  function closeConfirmationModal() {
+    document.getElementById('safetyConfirmModal').classList.add('hidden');
+  }
+
+  function executeFinalDeduction() {
+    closeConfirmationModal();
+    const reqId = currentTargetReq.reqId;
+
+    // Update row in table if exists
+    const row = document.querySelector(`tr[data-id="${reqId}"]`);
+    if (row) {
+      row.setAttribute('data-status', 'FULFILLED');
+      const statusCell = row.children[7];
+      statusCell.innerHTML = `
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+          <span class="material-symbols-outlined text-[14px]">check</span>
+          Fulfilled
+        </span>
+      `;
+    }
+
+    showToast(`Inventory updated: ${currentTargetReq.unitsReq} units dispatched for ${reqId}.`);
+  }
+
+  // Quick Inline Approval
+  function approveDirectly(reqId) {
+    const row = document.querySelector(`tr[data-id="${reqId}"]`);
+    if (row) {
+      row.setAttribute('data-status', 'APPROVED');
+      const statusCell = row.children[7];
+      statusCell.innerHTML = `
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+          Approved
+        </span>
+      `;
+      showToast(`Order ${reqId} approved for cold packing.`);
+    }
+  }
+
+  function triggerRejectPrompt(reqId) {
+    if (confirm(`Confirm immediate clinical rejection of requisition ${reqId}?`)) {
+      const row = document.querySelector(`tr[data-id="${reqId}"]`);
+      if (row) {
+        row.setAttribute('data-status', 'REJECTED');
+        row.classList.add('opacity-60');
+        const statusCell = row.children[7];
+        statusCell.innerHTML = `
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container text-on-error-container">
+            Rejected
+          </span>
+        `;
+        showToast(`Requisition ${reqId} marked rejected. Reason logged in audit.`, true);
+      }
+    }
+  }
+
+  // Requisition Slip Viewer
+  function viewRequisitionSlip(reqId, patient, hospital, group, units, priority) {
+    document.getElementById('slipReqId').innerText = reqId;
+    document.getElementById('slipPatient').innerText = patient;
+    document.getElementById('slipHospital').innerText = hospital;
+    document.getElementById('slipGroup').innerText = group;
+    document.getElementById('slipUnits').innerText = `${units} Units`;
+    document.getElementById('requisitionSlipModal').classList.remove('hidden');
+  }
+
+  function closeSlipModal() {
+    document.getElementById('requisitionSlipModal').classList.add('hidden');
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin-desktop flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>Blood Bank Management System • Clinical Inventory &amp; Distribution Architecture</span><span class="font-semibold text-primary">Academic Project | OOPs &amp; DBMS</span></div></footer></div></body></html>

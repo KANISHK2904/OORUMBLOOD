@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oorum Blood – Blood Bank Management System</title>
+  <link rel="icon" href="assets/oorum-blood-logo.png"/>
+  <meta name="description" content="Oorum Blood – Clinical Inventory & Distribution Architecture. Academic OOPs & DBMS Project."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ========================================================
+     SIDEBAR NAVIGATION
+     ======================================================== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <!-- Logo / Brand -->
+    <div class="sidebar-brand">
+      <div class="brand-logo-wrap">
+        <img src="assets/oorum-blood-logo.png" alt="Oorum Blood" class="brand-logo-img"/>
+      </div>
+    </div>
+
+    <!-- Active Node Indicator -->
+    <div class="sidebar-node-indicator">
+      <span class="node-label">Active Node</span>
+      <span class="node-pulse"></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a class="nav-item active" data-section="dashboard" href="#" id="nav-dashboard">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-item" data-section="donors" href="#" id="nav-donors">
+        <span class="material-symbols-outlined">person_heart</span>
+        <span>Donor Management</span>
+      </a>
+      <a class="nav-item" data-section="patients" href="#" id="nav-patients">
+        <span class="material-symbols-outlined">personal_injury</span>
+        <span>Patient Management</span>
+      </a>
+      <a class="nav-item" data-section="hospitals" href="#" id="nav-hospitals">
+        <span class="material-symbols-outlined">local_hospital</span>
+        <span>Hospital Management</span>
+      </a>
+      <a class="nav-item" data-section="inventory" href="#" id="nav-inventory">
+        <span class="material-symbols-outlined">water_drop</span>
+        <span>Blood Inventory</span>
+      </a>
+      <a class="nav-item" data-section="donations" href="#" id="nav-donations">
+        <span class="material-symbols-outlined">volunteer_activism</span>
+        <span>Blood Donations</span>
+      </a>
+      <a class="nav-item" data-section="requests" href="#" id="nav-requests">
+        <span class="material-symbols-outlined">assignment_late</span>
+        <span>Blood Requests</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Emergency Unit Footer -->
+  <div class="sidebar-footer">
+    <div class="emergency-box">
+      <div class="emergency-header">
+        <span class="emergency-label">Emergency Unit</span>
+        <span class="material-symbols-outlined emergency-icon">emergency</span>
+      </div>
+      <p class="emergency-text">Blood Emergency Dispatch active on secure terminal 04.</p>
+    </div>
+  </div>
+</aside>
+
+<!-- ========================================================
+     MAIN CONTENT WRAPPER
+     ======================================================== -->
+<div class="main-wrapper">
+
+  <!-- Top Header -->
+  <header class="top-header">
+    <div class="header-left">
+      <div class="breadcrumb">
+        <span class="material-symbols-outlined breadcrumb-icon">monitor_heart</span>
+        <span class="breadcrumb-base">Live Terminal</span>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current" id="headerTitle">Clinical Portal</span>
+      </div>
+      <div class="header-time">
+        <span class="material-symbols-outlined">schedule</span>
+        <span id="headerClock">Loading...</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-search">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="search" id="globalSearch" placeholder="Search donors, patients, hospitals..." class="search-input" autocomplete="off"/>
+      </div>
+      <div class="admin-badge">Admin</div>
+      <div class="admin-profile">
+        <div class="admin-avatar">
+          <span class="material-symbols-outlined">account_circle</span>
+        </div>
+        <div class="admin-info">
+          <span class="admin-name">System Admin</span>
+          <span class="admin-role">Blood Bank Coordinator</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       PAGE SECTIONS
+       ====================================================== -->
+  <main class="page-main">
+
+    <!-- =================== DASHBOARD =================== -->
+    <section id="section-dashboard" class="page-section active">
+      <!-- Page Header -->
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="status-pulse"></span>
+            <span>Real-Time Clinical Telemetry</span>
+          </div>
+          <h1 class="page-title">Executive Operations Hub</h1>
+          <p class="page-subtitle">Central inventory reserve, emergency cross-match, and dispatch coordination.</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-secondary" onclick="navigate('requests')">
+            <span class="material-symbols-outlined">assignment_add</span>
+            <span>+ New Blood Request</span>
+          </button>
+          <button class="btn btn-primary" onclick="navigate('donations')">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span>+ Record Donation</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid" id="dashboardKPIs">
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div>
+              <span class="kpi-label">Total Donors</span>
+              <span class="kpi-value" id="kpi-donors">0</span>
+            </div>
+            <div class="kpi-icon primary"><span class="material-symbols-outlined">person_heart</span></div>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-footer-text">Registered in system</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div>
+              <span class="kpi-label">Registered Patients</span>
+              <span class="kpi-value" id="kpi-patients">0</span>
+            </div>
+            <div class="kpi-icon secondary"><span class="material-symbols-outlined">personal_injury</span></div>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-footer-text">Patient records</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div>
+              <span class="kpi-label">Available Units</span>
+              <span class="kpi-value" id="kpi-units">0</span>
+            </div>
+            <div class="kpi-icon primary-light"><span class="material-symbols-outlined">bloodtype</span></div>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-footer-text">Across 8 serogroups</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div>
+              <span class="kpi-label">Pending Requests</span>
+              <span class="kpi-value text-error" id="kpi-pending">0</span>
+            </div>
+            <div class="kpi-icon error"><span class="material-symbols-outlined">assignment_late</span></div>
+          </div>
+          <div class="kpi-footer kpi-footer-error">
+            <span class="kpi-footer-text">Awaiting fulfillment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-grid">
+        <!-- Blood Stock Bar Chart -->
+        <div class="card charts-left">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Reserve Distribution by Blood Group</h2>
+              <p class="card-subtitle">Real-time unit capacity (Max Baseline: 100 units)</p>
+            </div>
+            <div class="legend">
+              <span class="legend-item"><span class="legend-dot sufficient"></span>Sufficient (&gt;30)</span>
+              <span class="legend-item"><span class="legend-dot low"></span>Low (15–30)</span>
+              <span class="legend-item"><span class="legend-dot critical"></span>Critical (&lt;15)</span>
+            </div>
+          </div>
+          <div class="bar-chart-container">
+            <div class="bar-chart" id="dashboardBarChart">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Donut Chart -->
+        <div class="card charts-right">
+          <h2 class="card-title">Stock Composition</h2>
+          <p class="card-subtitle" id="donutSubtitle">Aggregate 0 units</p>
+          <div class="donut-wrapper">
+            <svg viewBox="0 0 120 120" class="donut-svg" id="donutSvg">
+              <circle cx="60" cy="60" r="48" fill="none" stroke="#e0e3e6" stroke-width="14"/>
+              <!-- Segments rendered by JS -->
+            </svg>
+            <div class="donut-center">
+              <span class="donut-total" id="donutTotal">0</span>
+              <span class="donut-label">Total Units</span>
+            </div>
+          </div>
+          <div class="donut-legend" id="donutLegend">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Recent Requests + Recent Donations -->
+      <div class="bottom-grid">
+        <!-- Recent Requests Table -->
+        <div class="card bottom-left">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Recent Blood Requests</h2>
+              <p class="card-subtitle">Live clinical ward cross-match triage queue</p>
+            </div>
+            <span class="badge badge-secondary" id="pendingBadge">0 Pending</span>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="dashReqTable">
+              <thead>
+                <tr>
+                  <th>Req ID</th>
+                  <th>Patient</th>
+                  <th>Hospital</th>
+                  <th>Group</th>
+                  <th class="text-center">Units</th>
+                  <th>Status</th>
+                  <th class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="dashReqBody">
+                <tr class="empty-row">
+                  <td colspan="7">
+                    <div class="empty-state">
+                      <span class="material-symbols-outlined empty-icon">assignment_late</span>
+                      <p>No recent blood requests</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Donations Feed -->
+        <div class="card bottom-right">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Recent Donations</h2>
+              <p class="card-subtitle">Validated phlebotomy inputs</p>
+            </div>
+            <span class="material-symbols-outlined text-primary">volunteer_activism</span>
+          </div>
+          <div class="donation-feed" id="dashDonationFeed">
+            <div class="empty-state">
+              <span class="material-symbols-outlined empty-icon">volunteer_activism</span>
+              <p>No donations recorded yet</p>
+            </div>
+          </div>
+          <a href="#" class="view-all-link" onclick="navigate('donations'); return false;">
+            View Complete Donation Intake Log →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== DONORS =================== -->
+    <section id="section-donors" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">person_heart</span>
+            <span>Phlebotomy Registry</span>
+          </div>
+          <h1 class="page-title">Donor Management</h1>
+          <p class="page-subtitle">Register and manage blood donors. Age restriction: 18–65 years.</p>
+        </div>
+        <div class="page-header-actions">
+          <div class="search-box">
+            <span class="material-symbols-outlined">search</span>
+            <input type="search" id="donorSearch" placeholder="Search by name or blood group..." autocomplete="off"/>
+          </div>
+          <button class="btn btn-primary" id="btnAddDonor">
+            <span class="material-symbols-outlined">person_add</span>
+            <span>Register Donor</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood Group</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Last Donation</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="donorsTableBody">
+              <tr class="empty-row">
+                <td colspan="8">
+                  <div class="empty-state">
+                    <span class="material-symbols-outlined empty-icon">person_heart</span>
+                    <p class="empty-title">No donors registered yet</p>
+                    <p class="empty-sub">Click "Register Donor" to add your first donor.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== PATIENTS =================== -->
+    <section id="section-patients" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">personal_injury</span>
+            <span>Patient Registry</span>
+          </div>
+          <h1 class="page-title">Patient Management</h1>
+          <p class="page-subtitle">Register and manage patients requiring blood transfusions.</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" id="btnAddPatient">
+            <span class="material-symbols-outlined">person_add</span>
+            <span>Add Patient</span>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood Group</th>
+                <th>Phone</th>
+                <th>Disease / Condition</th>
+                <th>Hospital</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="patientsTableBody">
+              <tr class="empty-row">
+                <td colspan="8">
+                  <div class="empty-state">
+                    <span class="material-symbols-outlined empty-icon">personal_injury</span>
+                    <p class="empty-title">No patients registered yet</p>
+                    <p class="empty-sub">Click "Add Patient" to add your first patient.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== HOSPITALS =================== -->
+    <section id="section-hospitals" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">local_hospital</span>
+            <span>Healthcare Facility Registry</span>
+          </div>
+          <h1 class="page-title">Hospital Management</h1>
+          <p class="page-subtitle">Register and manage partner hospitals and healthcare facilities.</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" id="btnAddHospital">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span>Register Hospital</span>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Registration No.</th>
+                <th>Address</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="hospitalsTableBody">
+              <tr class="empty-row">
+                <td colspan="7">
+                  <div class="empty-state">
+                    <span class="material-symbols-outlined empty-icon">local_hospital</span>
+                    <p class="empty-title">No hospitals registered yet</p>
+                    <p class="empty-sub">Click "Register Hospital" to add your first hospital.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BLOOD INVENTORY =================== -->
+    <section id="section-inventory" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">bloodtype</span>
+            <span>Clinical Biorepository · 8 Phenotype Groups</span>
+          </div>
+          <h1 class="page-title">Blood Inventory Status</h1>
+          <p class="page-subtitle">Real-time phenotypic reserve gauges. Capacity ceiling: 100 units per group.</p>
+        </div>
+      </div>
+
+      <!-- 8 Blood Group Cards -->
+      <div class="blood-group-grid" id="bloodGroupCards">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Inventory Table -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">
+          <div class="flex-row gap-sm align-center">
+            <span class="material-symbols-outlined text-primary">inventory_2</span>
+            <span class="card-title">Phenotype Reserve Summary</span>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Blood Group</th>
+                <th>Rh Factor</th>
+                <th class="text-right">Available Units</th>
+                <th>Stock Status</th>
+                <th>Capacity</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BLOOD DONATIONS =================== -->
+    <section id="section-donations" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">volunteer_activism</span>
+            <span>Phlebotomy Intake Log</span>
+          </div>
+          <h1 class="page-title">Blood Donations</h1>
+          <p class="page-subtitle">Record donations and track phlebotomy intake. Stock is updated automatically.</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" id="btnAddDonation">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span>Record Donation</span>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Donor Name</th>
+                <th>Blood Group</th>
+                <th class="text-center">Units</th>
+                <th>Donation Date</th>
+              </tr>
+            </thead>
+            <tbody id="donationsTableBody">
+              <tr class="empty-row">
+                <td colspan="5">
+                  <div class="empty-state">
+                    <span class="material-symbols-outlined empty-icon">volunteer_activism</span>
+                    <p class="empty-title">No donations recorded yet</p>
+                    <p class="empty-sub">Click "Record Donation" to log the first phlebotomy intake.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BLOOD REQUESTS =================== -->
+    <section id="section-requests" class="page-section">
+      <div class="page-header-card">
+        <div class="page-header-left">
+          <div class="page-status-badge">
+            <span class="badge-pill badge-error">Emergency Protocol</span>
+            <span class="dot-green"></span>
+            <span>System Sync: Live</span>
+          </div>
+          <h1 class="page-title">Blood Requests Dispatch &amp; Cross-Match</h1>
+          <p class="page-subtitle">Clinical triage terminal for inpatient transfers, trauma requisition, and inventory allocation.</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" id="btnAddRequest">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span>Create Blood Request</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Request Stats -->
+      <div class="req-stats-grid" id="reqStatsGrid">
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div><span class="kpi-label">Total Requests</span><span class="kpi-value" id="reqTotal">0</span></div>
+            <div class="kpi-icon secondary"><span class="material-symbols-outlined">ballot</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div><span class="kpi-label">Pending Review</span><span class="kpi-value" id="reqPending">0</span></div>
+            <div class="kpi-icon secondary"><span class="material-symbols-outlined">pending_actions</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div><span class="kpi-label">Fulfilled</span><span class="kpi-value text-success" id="reqFulfilled">0</span></div>
+            <div class="kpi-icon success"><span class="material-symbols-outlined">task_alt</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-top">
+            <div><span class="kpi-label">Rejected</span><span class="kpi-value text-error" id="reqRejected">0</span></div>
+            <div class="kpi-icon error"><span class="material-symbols-outlined">cancel</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter + Status Tabs -->
+      <div class="card filter-bar">
+        <div class="filter-row">
+          <div class="search-box">
+            <span class="material-symbols-outlined">search</span>
+            <input type="search" id="requestSearch" placeholder="Search by patient, hospital, blood group..." autocomplete="off"/>
+          </div>
+          <div class="status-tabs" id="requestStatusTabs">
+            <button class="tab-btn active" data-status="ALL">All</button>
+            <button class="tab-btn" data-status="Pending">Pending</button>
+            <button class="tab-btn" data-status="Fulfilled">Fulfilled</button>
+            <button class="tab-btn" data-status="Rejected">Rejected</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Req ID</th>
+                <th>Patient</th>
+                <th>Hospital / Facility</th>
+                <th>Blood Group</th>
+                <th class="text-center">Units</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="requestsTableBody">
+              <tr class="empty-row">
+                <td colspan="8">
+                  <div class="empty-state">
+                    <span class="material-symbols-outlined empty-icon">assignment_late</span>
+                    <p class="empty-title">No blood requests yet</p>
+                    <p class="empty-sub">Click "Create Blood Request" to submit the first requisition.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span>Blood Bank Management System · Clinical Inventory &amp; Distribution Architecture</span>
+    <span class="footer-right">Academic Project | OOPs &amp; DBMS</span>
+  </footer>
+</div>
+
+<!-- ========================================================
+     MODALS
+     ======================================================== -->
+
+<!-- Toast Notification -->
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+<!-- Confirm Dialog -->
+<div id="confirmModal" class="modal-overlay hidden">
+  <div class="modal-dialog confirm-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title" id="confirmTitle">Confirm Action</h3>
+    </div>
+    <div class="modal-body">
+      <p id="confirmMessage">Are you sure?</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" id="confirmCancel">Cancel</button>
+      <button class="btn btn-danger" id="confirmOk">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Donor Modal -->
+<div id="donorModal" class="modal-overlay hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title" id="donorModalTitle">Register Donor</h3>
+      <button class="modal-close" onclick="closeModal('donorModal')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="donorForm" class="form-grid">
+        <input type="hidden" id="donorId"/>
+        <div class="form-group">
+          <label for="donorName">Full Name <span class="required">*</span></label>
+          <input type="text" id="donorName" placeholder="e.g. Rahul Sharma" required/>
+        </div>
+        <div class="form-group">
+          <label for="donorPhone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="donorPhone" placeholder="e.g. 9876543210" required/>
+        </div>
+        <div class="form-group">
+          <label for="donorEmail">Email Address</label>
+          <input type="email" id="donorEmail" placeholder="e.g. rahul@email.com"/>
+        </div>
+        <div class="form-group">
+          <label for="donorAge">Age <span class="required">*</span></label>
+          <input type="number" id="donorAge" placeholder="18–65" min="18" max="65" required/>
+        </div>
+        <div class="form-group">
+          <label for="donorBloodGroup">Blood Group <span class="required">*</span></label>
+          <select id="donorBloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="donorLastDate">Last Donation Date</label>
+          <input type="date" id="donorLastDate"/>
+        </div>
+        <div class="form-group form-full">
+          <label for="donorAddress">Address</label>
+          <textarea id="donorAddress" placeholder="Enter donor's address" rows="2"></textarea>
+        </div>
+        <div id="donorFormError" class="form-error hidden"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('donorModal')">Cancel</button>
+      <button class="btn btn-primary" id="donorSubmitBtn" onclick="submitDonor()">Register Donor</button>
+    </div>
+  </div>
+</div>
+
+<!-- Patient Modal -->
+<div id="patientModal" class="modal-overlay hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title" id="patientModalTitle">Add Patient</h3>
+      <button class="modal-close" onclick="closeModal('patientModal')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="patientForm" class="form-grid">
+        <input type="hidden" id="patientId"/>
+        <div class="form-group">
+          <label for="patientName">Full Name <span class="required">*</span></label>
+          <input type="text" id="patientName" placeholder="e.g. Priya Patel" required/>
+        </div>
+        <div class="form-group">
+          <label for="patientPhone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="patientPhone" placeholder="e.g. 9876543210" required/>
+        </div>
+        <div class="form-group">
+          <label for="patientAge">Age <span class="required">*</span></label>
+          <input type="number" id="patientAge" placeholder="e.g. 35" min="1" required/>
+        </div>
+        <div class="form-group">
+          <label for="patientBloodGroup">Blood Group <span class="required">*</span></label>
+          <select id="patientBloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="patientDisease">Disease / Condition</label>
+          <input type="text" id="patientDisease" placeholder="e.g. Anaemia, Thalassemia"/>
+        </div>
+        <!-- Hospital autocomplete field -->
+        <div class="form-group" style="position:relative;">
+          <label for="patientHospitalInput">Hospital</label>
+          <input type="hidden" id="patientHospitalId" value="0"/>
+          <input type="text" id="patientHospitalInput" placeholder="Type hospital name or code…" autocomplete="off" oninput="onPatientHospitalInput(this.value)" onfocus="onPatientHospitalInput(this.value)"/>
+          <div id="patientHospitalDropdown" style="
+            display:none; position:absolute; top:calc(100% + 2px); left:0; right:0;
+            background:var(--surface-container-lowest); border:1px solid var(--surface-container-high);
+            border-radius:var(--radius-md); box-shadow:var(--shadow-md); z-index:999;
+            max-height:220px; overflow-y:auto;"></div>
+        </div>
+        <div class="form-group form-full">
+          <label for="patientAddress">Address</label>
+          <textarea id="patientAddress" placeholder="Enter patient's address" rows="2"></textarea>
+        </div>
+        <div id="patientFormError" class="form-error hidden"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('patientModal')">Cancel</button>
+      <button class="btn btn-primary" id="patientSubmitBtn" onclick="submitPatient()">Add Patient</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hospital Modal -->
+<div id="hospitalModal" class="modal-overlay hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title" id="hospitalModalTitle">Register Hospital</h3>
+      <button class="modal-close" onclick="closeModal('hospitalModal')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="hospitalForm" class="form-grid">
+        <input type="hidden" id="hospitalId"/>
+        <div class="form-group form-full">
+          <label for="hospitalName">Hospital Name <span class="required">*</span></label>
+          <input type="text" id="hospitalName" placeholder="e.g. Apollo Hospital, Mumbai" required/>
+        </div>
+        <div class="form-group">
+          <label for="hospitalPhone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="hospitalPhone" placeholder="e.g. 02212345678" required/>
+        </div>
+        <div class="form-group">
+          <label for="hospitalEmail">Email Address</label>
+          <input type="email" id="hospitalEmail" placeholder="e.g. admin@hospital.com"/>
+        </div>
+        <div class="form-group">
+          <label for="hospitalRegNo">Registration Number</label>
+          <input type="text" id="hospitalRegNo" placeholder="e.g. MH-HOSP-2024-001"/>
+        </div>
+        <div class="form-group form-full">
+          <label for="hospitalAddress">Address</label>
+          <textarea id="hospitalAddress" placeholder="Enter hospital's address" rows="2"></textarea>
+        </div>
+        <div id="hospitalFormError" class="form-error hidden"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('hospitalModal')">Cancel</button>
+      <button class="btn btn-primary" id="hospitalSubmitBtn" onclick="submitHospital()">Register Hospital</button>
+    </div>
+  </div>
+</div>
+
+<!-- Donation Modal -->
+<div id="donationModal" class="modal-overlay hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title">Record Blood Donation</h3>
+      <button class="modal-close" onclick="closeModal('donationModal')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="donationForm" class="form-grid">
+        <div class="form-group form-full">
+          <label for="donationDonorId">Select Donor <span class="required">*</span></label>
+          <select id="donationDonorId" required>
+            <option value="">Select a donor</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="donationBloodGroup">Blood Group <span class="required">*</span></label>
+          <select id="donationBloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="donationUnits">Units Donated <span class="required">*</span></label>
+          <input type="number" id="donationUnits" placeholder="e.g. 1" min="1" required/>
+        </div>
+        <div class="form-group form-full">
+          <label for="donationDate">Donation Date <span class="required">*</span></label>
+          <input type="date" id="donationDate" required/>
+        </div>
+        <div id="donationFormError" class="form-error hidden"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('donationModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitDonation()">Record Donation</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blood Request Modal -->
+<div id="requestModal" class="modal-overlay hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="modal-title">Create Blood Request</h3>
+      <button class="modal-close" onclick="closeModal('requestModal')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="requestForm" class="form-grid">
+        <div class="form-group form-full">
+          <label for="reqPatientId">Select Patient <span class="required">*</span></label>
+          <select id="reqPatientId" required>
+            <option value="">Select a patient</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label for="reqHospitalId">Select Hospital <span class="required">*</span></label>
+          <select id="reqHospitalId" required>
+            <option value="">Select a hospital</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reqBloodGroup">Blood Group <span class="required">*</span></label>
+          <select id="reqBloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reqUnits">Units Required <span class="required">*</span></label>
+          <input type="number" id="reqUnits" placeholder="e.g. 2" min="1" required/>
+        </div>
+        <div id="requestFormError" class="form-error hidden"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('requestModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitRequest()">Create Request</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/app.js"></script>
+</body>
+</html>
